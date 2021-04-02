@@ -1,0 +1,91 @@
+<html>
+ <head>
+  <title>PRACTICE</title>
+<link rel="stylesheet" href="final2.css" type="text/css">
+ </head>
+<body background="final2.jpg" style="background-position:center; background-repeat:no-repeat; background-size:100%">
+<div  class="one" >
+     <div class="first" id="main">
+     <h2 id="main1" style="font-size: 25px; margin-top: 10px;"></h2>
+     </div>
+  
+            <div class="two"  >
+              <h2 style="font-size: 25px;">Square <h2 id="one" style="font-size: 30px;"></h2></h2>
+	        </div>
+  
+            <div class="three">
+              <h2 style="font-size: 25px;">Cube <h2 id="two" style="font-size: 30px;"></h2></h2>
+            </div>
+  
+            <div class="four">
+              <h2 style="font-size: 25px;">Logarithm <h2 id="three" style="font-size: 30px;"></h2></h2>
+            </div>
+  
+            <div class="five">
+              <h2 style="font-size: 25px;">Factorial <h2 id="four" style="font-size: 30px;"></h2></h2>
+            </div>
+  
+            <div class="six">
+              <h2 style="font-size: 25px;">Binary <h2 id="five" style="font-size: 30px;"></h2></h2>
+            </div>
+ 
+ </div>
+ <script>
+  class cal
+  {
+      constructor (a)
+      {
+          this.a=prompt("Enter any number");
+      }
+      mainn()
+        {
+          let p=this.a;
+          return p;
+        }
+        
+        square()
+          {
+             let sq=this.a*this.a;
+             return sq;
+          }
+         cube()
+          {
+             let cube=this.a*this.a*this.a;
+             return cube;
+          }
+         log()
+          {
+             let lo=Math.log(this.a);
+             let log=lo.toFixed(2);
+             return log;
+          }
+        fac()
+          {
+             let n;
+             let f=1;
+             for(n=1;n<=this.a;n++)
+          {
+              f=f*n;
+          }
+              return f;
+          }
+       Binary()
+         {
+            let bin=this.a;
+            let binary=(bin>>>0).toString(2);
+            return binary;
+         }
+         
+         
+ }
+  
+  let mycal=new cal();
+  document.getElementById("main1").innerHTML="You Entered : " + mycal.mainn();
+  document.getElementById("one").innerHTML=mycal.square();
+  document.getElementById("two").innerHTML=mycal.cube();
+  document.getElementById("three").innerHTML=mycal.log();
+  document.getElementById("four").innerHTML=mycal.fac();
+  document.getElementById("five").innerHTML=mycal.Binary();
+  </script>
+ </body>
+</html>
